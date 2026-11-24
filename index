@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Para ti 💗</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: #e84393;
+  background: linear-gradient(135deg, #ffe5f1, #eee3ff);
+  overflow-x: hidden;
+}
+
+#inicio {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+h1, h2 {
+  color: #e84393;
+}
+
+button {
+  background: white;
+  color: #e84393;
+  border: 2px dotted #ff80bd;
+  padding: 16px 40px;
+  border-radius: 20px;
+  font-size: 19px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px #f5b5d4;
+}
+
+#tarjeta {
+  display: none;
+  width: 90%;
+  max-width: 450px;
+  margin: 25px auto;
+  padding: 22px;
+  background: #ffffffdf;
+  border: 3px dotted #ff80bd;
+  border-radius: 25px;
+  box-shadow: 0 5px 20px #efb6d5;
+  animation: aparecer 1s ease;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: scale(.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* FOTO DE ELLA */
+
+.marco {
+  background: white;
+  padding: 10px;
+  border: 3px solid #ffadd2;
+  border-radius: 20px;
+  width: 230px;
+  margin: 20px auto;
+  box-shadow: 0 5px 15px #f4b6d2;
+  transform: rotate(-2deg);
+}
+
+.marco img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.marco p {
+  margin: 10px 0 2px;
+  font-family: cursive;
+}
+
+/* SNOOPY */
+
+.personaje img {
+  width: 150px;
+  height: auto;
+  animation: saltar 1.5s infinite;
+}
+
+@keyframes saltar {
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* PASTEL */
+
+.pastel {
+  font-size: 85px;
+  margin: 20px;
+  animation: flotar 2s infinite;
+}
+
+@keyframes flotar {
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* MENSAJE */
+
+.mensaje {
+  background: #fff5fa;
+  border: 1px dotted #ff9acb;
+  border-radius: 18px;
+  padding: 20px;
+  margin-top: 20px;
+  color: #bd5590;
+  line-height: 1.8;
+}
+
+.mensaje h3 {
+  color: #e84393;
+}
+
+.firma {
+  font-family: cursive;
+  font-size: 18px;
+  margin-top: 25px;
+}
+
+/* CONFETI */
+
+#confeti {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.confeti {
+  position: absolute;
+  top: -30px;
+  animation: caer linear forwards;
+}
+
+@keyframes caer {
+  to {
+    transform: translateY(110vh) rotate(720deg);
+  }
+}
+
+/* MÚSICA */
+
+.musica {
+  margin: 20px auto;
+  padding: 12px;
+  background: #fff0f7;
+  border-radius: 15px;
+}
+
+.musica button {
+  padding: 10px 20px;
+  font-size: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="confeti"></div>
+
+<!-- CANCIÓN -->
+
+<audio id="musica" loop>
+  <source src="Azul.mp3" type="audio/mpeg">
+</audio>
+
+<!-- PANTALLA INICIAL -->
+
+<section id="inicio">
+
+  <h1>💗 ¡Tengo una sorpresa para ti! 💗</h1>
+
+  <p>Hay algo especial esperando por ti...</p>
+
+  <div style="font-size:65px">🎁🌸</div>
+
+  <button onclick="abrir()">
+    Ábreme 💌
+  </button>
+
+</section>
+
+<!-- TARJETA DE CUMPLEAÑOS -->
+
+<section id="tarjeta">
+
+  <h2>🎂 ¡FELIZ CUMPLEAÑOS! 🎂</h2>
+
+  <p>Hoy es un día muy especial 💗</p>
+
+  <!-- FOTO DE ELLA -->
+
+  <div class="marco">
+
+    <img src="Logo.jpg" alt="Fotografía de ella">
+
+    <p>✨ Una persona especial ✨</p>
+
+  </div>
+
+  <!-- SNOOPY -->
+
+  <div class="personaje">
+
+    <img src="Snoopy.jpg" alt="Snoopy">
+
+  </div>
+
+  <p>🐶💗 Snoopy también te desea feliz cumpleaños 💗</p>
+
+  <!-- PASTEL -->
+
+  <div class="pastel">🎂</div>
+
+  <!-- DEDICATORIA -->
+
+  <div class="mensaje">
+
+    <h3>💖 Para ti, con mucho cariño 💖</h3>
+
+    <p>
+      Hoy es un día para celebrar lo maravillosa
+      que es tu vida. Espero que todos tus sueños
+      se hagan realidad y que nunca te falten
+      razones para sonreír.
+    </p>
+
+    <p>
+      Y recuerda que siempre estaré para ti,
+      tigecito. Sé que serás una gran odontóloga
+      y que lograrás todo lo que te propongas.
+    </p>
+
+    <p>
+      Que cada día esté lleno de momentos bonitos,
+      personas que te quieran y muchas alegrías.
+    </p>
+
+    <p>
+      Nunca olvides lo especial que eres para mí.
+      ¡Disfruta muchísimo tu día! 🌸
+    </p>
+
+    <h3>💕 ¡Feliz cumpleaños! 💕</h3>
+
+  </div>
+
+  <p class="firma">
+    🌷 Con mucho cariño,<br>
+    tu amigo tigecito 🌷
+  </p>
+
+  <!-- MÚSICA -->
+
+  <div class="musica">
+
+    <p>🎵 Tu canción favorita 💗</p>
+
+    <button onclick="alternarMusica()" id="botonMusica">
+      ⏸️ Pausar música
+    </button>
+
+  </div>
+
+</section>
+
+<script>
+
+/* ABRIR TARJETA */
+
+function abrir() {
+
+  document.getElementById("inicio").style.display = "none";
+
+  document.getElementById("tarjeta").style.display = "block";
+
+  const musica = document.getElementById("musica");
+
+  musica.volume = 0.5;
+
+  musica.play().then(() => {
+
+    document.getElementById("botonMusica").innerText =
+      "⏸️ Pausar música";
+
+  }).catch(() => {
+
+    document.getElementById("botonMusica").innerText =
+      "▶️ Reproducir música";
+
+  });
+
+  lanzarConfeti();
+
+  window.scrollTo(0, 0);
+}
+
+/* PAUSAR Y REPRODUCIR */
+
+function alternarMusica() {
+
+  const musica = document.getElementById("musica");
+
+  const boton = document.getElementById("botonMusica");
+
+  if (musica.paused) {
+
+    musica.play().then(() => {
+      boton.innerText = "⏸️ Pausar música";
+    }).catch(() => {
+      boton.innerText = "▶️ Reproducir música";
+    });
+
+  } else {
+
+    musica.pause();
+
+    boton.innerText = "▶️ Reproducir música";
+
+  }
+}
+
+/* CONFETI */
+
+function lanzarConfeti() {
+
+  const contenedor = document.getElementById("confeti");
+
+  const figuras = ["💗", "💕", "🌸", "✨", "💖"];
+
+  for (let i = 0; i < 50; i++) {
+
+    const pieza = document.createElement("span");
+
+    pieza.className = "confeti";
+
+    pieza.innerText =
+      figuras[Math.floor(Math.random() * figuras.length)];
+
+    pieza.style.left = Math.random() * 100 + "%";
+
+    pieza.style.animationDuration =
+      (3 + Math.random() * 4) + "s";
+
+    pieza.style.animationDelay =
+      Math.random() * 2 + "s";
+
+    pieza.style.fontSize =
+      (15 + Math.random() * 15) + "px";
+
+    contenedor.appendChild(pieza);
+
+  }
+}
+
+</script>
+
+</body>
+</html>
